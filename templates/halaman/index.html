@@ -1,4 +1,4 @@
-{% extends 'halaman/base.html' %}{% load static %} {% block content %}
+{% extends 'halaman/base.html' %} {% load static %} {% block content %}
 <div
   class="page-header header-filter header-small"
   data-parallax="true"
@@ -8,7 +8,7 @@
     <div class="row">
       <div class="col-md-8 col-md-offset-2 text-center">
         <h2 class="title">
-          SELAMAT DATANG DI WEBSITE PEMBERI INFORMASI TER-UPTODATE DAN TRENDING
+          SELAMAT DATANG DI WEBSITE INFORMASI GAME
         </h2>
       </div>
     </div>
@@ -55,7 +55,7 @@
                 >
               </h4>
               <p class="card-description">
-                {{ artikel.isi | truncatechars:"100" }}.<a
+                {{ artikel.isi | safe | truncatechars:"100" }}.<a
                   href="{% url 'detail_artikel' artikel.slug %}"
                 >
                   Read More

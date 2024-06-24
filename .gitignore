@@ -1,0 +1,13 @@
+
+mysite/__pychache__/*
+
+
+berita/migrations/*
+berita/__pychache__*
+
+pengguna/migrations/*
+pengguna/__pychache__/*
+
+.DS_Store
+
+.env

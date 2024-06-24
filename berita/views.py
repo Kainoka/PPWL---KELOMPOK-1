@@ -43,7 +43,7 @@ def kategori_add(request):
         )
         return redirect(kategori_list)
     context = {
-        'title' : 'tambah kategori'
+        'title' : 'Tambah Kategori'
     }
     return render(request, template_name, context)
 
@@ -63,7 +63,7 @@ def kategori_update(request, id_kategori):
         kategori.save()
         return redirect(kategori_list)
     context = {
-        'title': 'update kategori',
+        'title': 'Update Kategori',
         'kategori': kategori
     }
     return render(request, template_name, context)
@@ -85,7 +85,7 @@ def artikel_list(request):
     else:
         artikel = Artikel.objects.filter(author=request.user)
     context = {
-        'title': 'daftar artikel',
+        'title': 'Daftar Artikel',
         'artikel': artikel
     }
     return render (request, template_name, context)
@@ -105,7 +105,7 @@ def artikel_add(request):
             print(forms.error_class)
     forms = ArtikelForm()
     context = {
-        'title': 'tambah artikel',
+        'title': 'Tambah Artikel',
         'forms': forms
     }
     return render(request, template_name, context)
@@ -142,7 +142,7 @@ def artikel_update(request, id_artikel):
 
     forms = ArtikelForm(instance=artikel)
     context = {
-        'title' : 'tambah artikel',
+        'title' : 'Tambah Artikel',
         'forms' : forms
     }
     return render(request, template_name, context)
