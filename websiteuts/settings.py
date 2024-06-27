@@ -74,7 +74,11 @@ DATABASES = {
         'PASSWORD': config('DB_PASSWORD'),
         'HOST': config('DB_HOST'),   # Or an IP Address that your DB is hosted on
         'PORT': config('DB_PORT'),
-    }
+        'OPTION': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+            'charset': 'utf8mb4',
+        }
+    },
 }
 
 
